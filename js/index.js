@@ -2,13 +2,19 @@ document.getElementById('blog').addEventListener('click',function(){
     window.location.href='home.html';
 });
 
+
+
 // noakhali donate part
 
 document.getElementById('noakhali-donate').
-addEventListener('click',function(){
+addEventListener('click',function(event){
     let balanceNumber=getTextFieldById('balance');
     let noakhaliDonateNumber=getTextFieldById('noakhali-donate-balance');
     let noakhaliDonateAmountNumber=getInputFieldById('noakhali-donate-amount');
+    if(isNaN(noakhaliDonateAmountNumber) || noakhaliDonateAmountNumber<0){
+        alert('Invalid Donation Number');
+        return;
+    }
     if(balanceNumber>noakhaliDonateAmountNumber){
         noakhaliDonateNumber+=noakhaliDonateAmountNumber;
         document.getElementById('noakhali-donate-balance').innerText=noakhaliDonateNumber;
@@ -20,10 +26,12 @@ addEventListener('click',function(){
         let now=new Date();
 
         div.innerHTML=`
-        <h4 class="text-lg font-semibold text-[#111111] mb-2">${noakhaliDonateAmountNumber} Taka is Donated for famine-2024 at noakhali, Bangladesh</h4>
+        <h4 class="text-lg font-semibold text-[#111111] mb-2">${noakhaliDonateAmountNumber} Taka is Donated for Flood at noakhali, Bangladesh</h4>
         <p>${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
+        my_modal_1.showModal();
+        event.submit();
     }
     else{
         alert('You have not enough money');
@@ -35,6 +43,10 @@ addEventListener('click',function(){
     let balanceNumber=getTextFieldById('balance');
     let feniDonateNumber=getTextFieldById('feni-donate-balance');
     let feniDonateAmountNumber=getInputFieldById('feni-donate-amount');
+    if(isNaN(feniDonateAmountNumber) || feniDonateAmountNumber<0){
+        alert('Invalid Donation Number');
+        return;
+    }
     if(balanceNumber>feniDonateAmountNumber){
         feniDonateNumber+=feniDonateAmountNumber;
         document.getElementById('feni-donate-balance').innerText=feniDonateNumber;
@@ -50,6 +62,7 @@ addEventListener('click',function(){
         <p>${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
+        my_modal_1.showModal();
     }
     else{
         alert('You have not enough money');
@@ -61,6 +74,10 @@ addEventListener('click',function(){
     let balanceNumber=getTextFieldById('balance');
     let quotaDonateNumber=getTextFieldById('quota-donate-balance');
     let quotaDonateAmountNumber=getInputFieldById('quota-donate-amount');
+    if(isNaN(quotaDonateAmountNumber) || quotaDonateAmountNumber<0){
+        alert('Invalid Donation Number');
+        return;
+    }
     if(balanceNumber>quotaDonateAmountNumber){
         quotaDonateNumber+=quotaDonateAmountNumber;
         document.getElementById('quota-donate-balance').innerText=quotaDonateNumber;
@@ -76,6 +93,8 @@ addEventListener('click',function(){
         <p>${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
+        my_modal_1.showModal();
+
     }
     else{
         alert('You have not enough money');

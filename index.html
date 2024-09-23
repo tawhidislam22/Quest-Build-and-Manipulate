@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quest-Build-and-Manipulate</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-Lexend">
     <header class="sticky top-0">
         <nav class="bg-[#F9F7F3] py-6 px-12 flex justify-between">
             <button id="blog" class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Blog</button>
@@ -33,7 +37,7 @@
                 <h4 class="text-lg text-[#111111] font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h4>
                 <p class="text-base text-[#111111] font-light mb-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 <input id="noakhali-donate-amount" class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
-                <button id="noakhali-donate" class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
+                <button  id="noakhali-donate" class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
             </div>
         </div>
         
@@ -61,6 +65,29 @@
         <div id="history-section" class="hidden space-y-4">
             <!-- history  -->
         </div>
+        
+
+        <!-- modal  -->
+         <div>
+             <dialog id="my_modal_1" class="modal">
+                <div class="modal-box text-center">
+                   <h3 class="text-4xl font-bold mb-3">Congrates!</h3>
+                      <p class="py-4">Press ESC key or click the button below to close</p>
+                           <div class="flex justify-center">
+                               <img class="w-12 h-12" src="./assets/coin.png" alt="">
+                            </div>
+                        <p class="py-4 text-base text-gray-600 font-semibold">You Have Donated for Humankind</p>
+                        <h4 class="text-xl text-[#111111] font-bold">Successfully</h4>
+                        <div class="modal-action flex justify-center">
+                            <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">close confirmation</button>
+                        </form>
+                   </div>
+    
+                </div>
+            </dialog>
+         </div>
     </main> 
     <script src="./js/index.js"></script>
     <script src="./js/function.js"></script>

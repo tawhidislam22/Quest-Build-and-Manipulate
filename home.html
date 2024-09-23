@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
-<body>
-    <header>
+<body class="font-Lexend">
+    <header class="sticky top-0">
         <nav class="bg-[#F9F7F3] py-8 px-12 flex justify-between">
-            <button class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Home</button>
+            <button id="home" class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Home</button>
             <div class="flex gap-3 items-center">
                 <img src="./assets/logo.png" alt="">
                 <h3 class="text-lg font-semibold text-[#111111]">Donate Bangladesh</h3>
@@ -23,36 +27,55 @@
         </nav>
     </header>
     <main class="mx-8">
-        <h1 class="">Important FAQ</h1>
+        <h1 class="text-5xl text-[#111111] font-bold my-6 ">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
         <!-- faq section -->
         <div>
             <div class="join join-vertical w-full">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" checked="checked" />
-                  <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                  <div class="collapse-title text-2xl font-medium">What is the Document Object Model(DOM)?</div>
                   <div class="collapse-content">
-                    <p></p>
+                    <p class="text-base text-gray-600 font-semibold">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-base text-gray-600 font-semibold">To select an element from the DOM, you can use various JavaScript methods:</p>
+                    <ul class="text-base text-gray-600 font-semibold list-disc mx-8">
+                      <li>getElementById(id): Selects a single element by its unique ID.</li>
+                      <li>getElementsByClassName(className): Selects all elements with a specified class name, returning a live HTMLCollection.</li>
+                      <li>getElementsByTagName(tagName): Selects all elements with a specified tag name, also returning a live HTMLCollection.</li>
+                      <li>querySelector(selector): Selects the first element that matches a CSS selector (like a class or ID).</li>
+                      <li>querySelectorAll(selector): Selects all elements that match a CSS selector, returning a static NodeList.</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and Why it is useful?</div>
+                  <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the DOM, and Why it is useful?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="text-base text-gray-600 font-semibold my-3">Event delegation is a technique in the DOM where a single event listener is added to a parent element instead of individual listeners on multiple child elements. When an event occurs on a child element, the event bubbles up to the parent, which can handle the event for all child elements.</p>
+                    <h3 class="text-xl text-[#111111] font-semibold mb-2">Why It's Useful:</h3>
+                    <ul class="text-base text-gray-600 font-semibold list-disc mx-8">
+                      <li>Performance: Reduces memory usage and improves performance, especially when dealing with a large number of elements, since fewer event listeners are created.</li>
+                      <li>Dynamic Elements: Automatically handles events for dynamically added child elements without needing to reattach listeners.</li>
+                      <li>Simplified Code: Makes the code cleaner and easier to maintain by centralizing event handling logic.</li>
+                    </ul>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
                     <div class="collapse-content">
-                      <p>hello</p>
+                      <p class="text-base text-gray-600 font-semibold">To manipulate an element's attributes and styles using the DOM (Document Object Model), you can use JavaScript methods and properties:</p>
+                      <ul class="text-base text-gray-600 font-semibold list-disc mx-8">
+                        <li>Access the Element: Use methods like document.getElementById(), document.querySelector(), or document.getElementsByClassName() to select the element you want to manipulate.</li>
+                        <li>Change Attributes: Use the setAttribute() method to change attributes (e.g., element.setAttribute('src', 'newImage.jpg')). You can also directly modify attributes like element.href or element.src.</li>
+                        <li>Modify Styles: Access the style property of the element to change CSS styles directly. For example, element.style.backgroundColor = 'blue' changes the background color.</li>
+                        <li>Add/Remove Classes: Use element.classList.add('new-class') to add a class, element.classList.remove('old-class') to remove one, or element.classList.toggle('toggle-class') to toggle a class on and off.</li>
+                      </ul>
                     </div>
                   </div>
               </div>
@@ -60,5 +83,6 @@
     </main>
     <script src="./js/index.js"></script>
     <script src="./js/function.js"></script>
+    <script src="./js/utlities.js"></script>
 </body>
 </html>
