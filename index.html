@@ -16,7 +16,7 @@
             </div>
             <div class="flex items-center gap-3">
                 <img src="./assets/coin.png" alt="">
-                <h3 class="text-lg text-gray-600 font-normal"><span>5500</span> BDT</h3>
+                <h3 class="text-lg text-gray-600 font-normal"><span id="balance">5500</span> BDT</h3>
             </div>
         </nav>
         <div class="flex justify-center gap-8 p-16">
@@ -29,11 +29,11 @@
         <div class="flex w-full gap-8 border border-gray-300 rounded-2xl p-4">
             <div class="w-1/2"><img class="w-full" src="./assets/noakhali.png" alt=""></div>
             <div class="w-1/2">
-                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span>0</span> BDT</button>
+                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span id="noakhali-donate-balance">0</span> BDT</button>
                 <h4 class="text-lg text-[#111111] font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h4>
                 <p class="text-base text-[#111111] font-light mb-4"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                <input class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
-                <button class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
+                <input id="noakhali-donate-amount" class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
+                <button id="noakhali-donate" class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
             </div>
         </div>
         
@@ -63,5 +63,6 @@
         </div>
     </main>
     <script src="./js/index.js"></script>
+    <script src="./js/function.js"></script>
 </body>
 </html>
