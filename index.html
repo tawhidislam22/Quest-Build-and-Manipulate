@@ -20,12 +20,12 @@
             </div>
         </nav>
         <div class="flex justify-center gap-8 p-8 bg-white">
-            <button class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Donation</button>
-            <button class="px-6 py-2 rounded-lg text-lg font-semibold text-[#111111] border border-gray-300">History</button>
+            <button id="donate-btn" class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Donation</button>
+            <button id="history-btn" class="px-6 py-2 rounded-lg text-lg font-semibold text-[#11111171] border border-gray-300">History</button>
         </div>
     </header>
     <main class="mx-16 ">
-        <div class="space-y-6">
+        <div id="donate-section" class="space-y-6">
         <div class="flex w-full gap-8 border border-gray-300 rounded-2xl p-4">
             <div class="w-1/2"><img class="w-full" src="./assets/noakhali.png" alt=""></div>
             <div class="w-1/2">
@@ -58,11 +58,12 @@
             </div>
         </div>
         </div>
-        <div>
-            //history 
+        <div id="history-section" class="hidden space-y-4">
+            <!-- history  -->
         </div>
-    </main>
+    </main> 
     <script src="./js/index.js"></script>
     <script src="./js/function.js"></script>
+    <script src="./js/utlities.js"></script>
 </body>
 </html>
