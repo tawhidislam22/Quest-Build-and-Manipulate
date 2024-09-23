@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <nav class="bg-[#F9F7F3] py-8 px-12 flex justify-between">
+    <header class="sticky top-0">
+        <nav class="bg-[#F9F7F3] py-6 px-12 flex justify-between">
             <button id="blog" class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Blog</button>
             <div class="flex gap-3 items-center">
                 <img src="./assets/logo.png" alt="">
@@ -19,12 +19,12 @@
                 <h3 class="text-lg text-gray-600 font-normal"><span id="balance">5500</span> BDT</h3>
             </div>
         </nav>
-        <div class="flex justify-center gap-8 p-16">
+        <div class="flex justify-center gap-8 p-8 bg-white">
             <button class="bg-[#B4F461] px-6 py-2 rounded-lg text-lg font-semibold text-[#111111]">Donation</button>
             <button class="px-6 py-2 rounded-lg text-lg font-semibold text-[#111111] border border-gray-300">History</button>
         </div>
     </header>
-    <main class="mx-16">
+    <main class="mx-16 ">
         <div class="space-y-6">
         <div class="flex w-full gap-8 border border-gray-300 rounded-2xl p-4">
             <div class="w-1/2"><img class="w-full" src="./assets/noakhali.png" alt=""></div>
@@ -40,21 +40,21 @@
         <div class="flex w-full gap-8 border border-gray-300 rounded-2xl p-4">
             <div class="w-1/2"><img class="w-full" src="./assets/feni.png" alt=""></div>
             <div class="w-1/2">
-                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span>0</span> BDT</button>
+                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span id="feni-donate-balance">0</span> BDT</button>
                 <h4 class="text-lg text-[#111111] font-bold mb-4">Donate for Flood Relief in Feni,Bangladesh</h4>
                 <p class="text-base text-[#111111] font-light mb-4">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
-                <input class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
-                <button class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
+                <input id="feni-donate-amount" class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
+                <button id="feni-donate" class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
             </div>
         </div>
         <div class="flex w-full gap-8 border border-gray-300 rounded-2xl p-4">
             <div class="w-1/2"><img class="w-full" src="./assets/quota-protest.png" alt=""></div>
             <div class="w-1/2">
-                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span>0</span> BDT</button>
+                <button class="flex gap-2 justify-center bg-gray-200 px-4 py-2 rounded-lg mb-6"><img src="./assets/coin.png" alt=""> <span id="quota-donate-balance">0</span> BDT</button>
                 <h4 class="text-lg text-[#111111] font-bold mb-4">Aid for Injured in the Quota Movement</h4>
                 <p class="text-base text-[#111111] font-light mb-4">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
-                <input class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
-                <button class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
+                <input id="quota-donate-amount" class="block w-full px-5 py-3 text-base text-[#111111] font-light rounded-lg border border-gray-200 mb-6 " type="text" placeholder="Write donate Amount">
+                <button id="quota-donate" class="w-full text-center bg-[#B4F461] rounded-lg py-3 text-lg text-[#111111] font-semibold">Donate Now</button>
             </div>
         </div>
         </div>
