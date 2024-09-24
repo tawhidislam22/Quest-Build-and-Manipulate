@@ -3,7 +3,6 @@ document.getElementById('blog').addEventListener('click',function(){
 });
 
 
-
 // noakhali donate part
 
 document.getElementById('noakhali-donate').
@@ -13,6 +12,7 @@ addEventListener('click',function(event){
     let noakhaliDonateAmountNumber=getInputFieldById('noakhali-donate-amount');
     if(isNaN(noakhaliDonateAmountNumber) || noakhaliDonateAmountNumber<0){
         alert('Invalid Donation Number');
+        document.getElementById('noakhali-donate-amount').value='';
         return;
     }
     if(balanceNumber>noakhaliDonateAmountNumber){
@@ -31,11 +31,12 @@ addEventListener('click',function(event){
         `;
         document.getElementById('history-section').appendChild(div);
         my_modal_1.showModal();
-        event.submit();
+        
     }
     else{
         alert('You have not enough money');
     }
+    document.getElementById('noakhali-donate-amount').value='';
 })
 //feni donate part
 document.getElementById('feni-donate').
@@ -45,6 +46,7 @@ addEventListener('click',function(){
     let feniDonateAmountNumber=getInputFieldById('feni-donate-amount');
     if(isNaN(feniDonateAmountNumber) || feniDonateAmountNumber<0){
         alert('Invalid Donation Number');
+        document.getElementById('feni-donate-amount').value='';
         return;
     }
     if(balanceNumber>feniDonateAmountNumber){
@@ -67,6 +69,7 @@ addEventListener('click',function(){
     else{
         alert('You have not enough money');
     }
+    document.getElementById('noakhali-donate-amount').value='';
 })
 //quota donate part
 document.getElementById('quota-donate').
@@ -76,6 +79,7 @@ addEventListener('click',function(){
     let quotaDonateAmountNumber=getInputFieldById('quota-donate-amount');
     if(isNaN(quotaDonateAmountNumber) || quotaDonateAmountNumber<0){
         alert('Invalid Donation Number');
+        document.getElementById('quota-donate-amount').value='';
         return;
     }
     if(balanceNumber>quotaDonateAmountNumber){
@@ -99,4 +103,38 @@ addEventListener('click',function(){
     else{
         alert('You have not enough money');
     }
+     document.getElementById('noakhali-donate-amount').value='';
+})
+//palestine donate part
+document.getElementById('palestine-donate').
+addEventListener('click',function(){
+    let balanceNumber=getTextFieldById('balance');
+    let palestineDonateNumber=getTextFieldById('palestine-donate-balance');
+    let palestineDonateAmountNumber=getInputFieldById('palestine-donate-amount');
+    if(isNaN(palestineDonateAmountNumber) || palestineDonateAmountNumber<0){
+        alert('Invalid Donation Number');
+        document.getElementById('palestine-donate-amount').value='';
+        return;
+    }
+    if(balanceNumber>palestineDonateAmountNumber){
+        palestineDonateNumber+=palestineDonateAmountNumber;
+        document.getElementById('palestine-donate-balance').innerText=palestineDonateNumber;
+        balanceNumber-=palestineDonateAmountNumber;
+        document.getElementById('balance').innerText=balanceNumber;
+
+        const div=document.createElement('div');
+        div.classList.add('border','p-4','rounded-lg');
+        let now=new Date();
+
+        div.innerHTML=`
+        <h4 class="text-lg font-semibold text-[#111111] mb-2">${palestineDonateAmountNumber} Taka is Donated for Children in Gaza,Palestine</h4>
+        <p>${now}</p>
+        `;
+        document.getElementById('history-section').appendChild(div);
+        my_modal_1.showModal();
+    }
+    else{
+        alert('You have not enough money');
+    }
+    document.getElementById('palestine-donate-amount').value='';
 })

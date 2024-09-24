@@ -18,8 +18,8 @@ addEventListener('click',function(){
 
 
 })
-
-document.getElementById('home').addEventListener('click',function(){
-    window.location.href='index.html';
-});
+// .document.getElementById('header').addEventListener('scroll',function(){
+//     document.getElementById('nav').classList.remove('');
+//     document.getElementById('nav').classList.add('bg-opacity-50');
+// })
 
