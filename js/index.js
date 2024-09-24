@@ -69,7 +69,7 @@ addEventListener('click',function(){
     else{
         alert('You have not enough money');
     }
-    document.getElementById('noakhali-donate-amount').value='';
+    document.getElementById('feni-donate-amount').value='';
 })
 //quota donate part
 document.getElementById('quota-donate').
@@ -103,7 +103,7 @@ addEventListener('click',function(){
     else{
         alert('You have not enough money');
     }
-     document.getElementById('noakhali-donate-amount').value='';
+     document.getElementById('quota-donate-amount').value='';
 })
 //palestine donate part
 document.getElementById('palestine-donate').
