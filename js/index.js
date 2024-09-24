@@ -27,7 +27,7 @@ addEventListener('click',function(event){
 
         div.innerHTML=`
         <h4 class="text-lg font-semibold text-[#111111] mb-2">${noakhaliDonateAmountNumber} Taka is Donated for Flood at noakhali, Bangladesh</h4>
-        <p>${now}</p>
+        <p>Date: ${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
         my_modal_1.showModal();
@@ -61,7 +61,7 @@ addEventListener('click',function(){
 
         div.innerHTML=`
         <h4 class="text-lg font-semibold text-[#111111] mb-2">${feniDonateAmountNumber} Taka is Donated for Flood Relief in Feni,Bangladesh</h4>
-        <p>${now}</p>
+        <p>Date: ${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
         my_modal_1.showModal();
@@ -94,7 +94,7 @@ addEventListener('click',function(){
 
         div.innerHTML=`
         <h4 class="text-lg font-semibold text-[#111111] mb-2">${quotaDonateAmountNumber} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h4>
-        <p>${now}</p>
+        <p>Date:${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
         my_modal_1.showModal();
@@ -128,7 +128,7 @@ addEventListener('click',function(){
 
         div.innerHTML=`
         <h4 class="text-lg font-semibold text-[#111111] mb-2">${palestineDonateAmountNumber} Taka is Donated for Children in Gaza,Palestine</h4>
-        <p>${now}</p>
+        <p>Date: ${now}</p>
         `;
         document.getElementById('history-section').appendChild(div);
         my_modal_1.showModal();
